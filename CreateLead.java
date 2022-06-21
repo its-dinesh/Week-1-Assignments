@@ -39,24 +39,13 @@ public class CreateLead {
 		WebElement Desc = driver.findElement(By.id("createLeadForm_description"));
 		Desc.sendKeys("Test"); 
 		WebElement email = driver.findElement(By.id("createLeadForm_primaryEmail"));
-		email.sendKeys("Test@gmail.com");
-		
-		
-		/*
-		 * WebElement State =
-		 * driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId")); Select
-		 * d = new Select(State); d.deselectByVisibleText("New York");
-		 */
-		 
-		  
-			
-			  WebElement state =
-			  driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId")); Select
-			  d = new Select(state); d.selectByVisibleText("New York");
-			 WebElement createbutton = driver.findElement(By.className("smallSubmit"));
-			 createbutton.click();
-			 String t = driver.getTitle();
-			 System.out.println(t);
+		email.sendKeys("Test@gmail.com"); 	
+		WebElement state = driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId")); 
+		Select d = new Select(state); d.selectByVisibleText("New York");
+		WebElement createbutton = driver.findElement(By.className("smallSubmit"));
+		createbutton.click();
+		String t = driver.getTitle();
+		System.out.println(t);
 	}
 
 }
